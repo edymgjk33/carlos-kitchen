@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Carlos Catering Equipment - Premium Design System */
+
+@layer base {
+  :root {
+    /* Premium monochromatic palette */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    
+    /* Pure contrast theme */
+    --premium-black: 0 0% 0%;
+    --premium-white: 0 0% 100%;
+    --premium-gray: 0 0% 96%;
+    --premium-gray-dark: 0 0% 20%;
+    --premium-gray-light: 0 0% 98%;
+    
+    /* Component colors using premium palette */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 20%;
+    
+    --accent: 0 0% 0%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 100%;
+    --ring: 0 0% 0%;
+    
+    /* Premium spacing and effects */
+    --radius: 0.25rem;
+    --shadow-elegant: 0 4px 20px -8px hsl(0 0% 0% / 0.1);
+    --shadow-premium: 0 8px 40px -12px hsl(0 0% 0% / 0.15);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elegant: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Premium dark variant for black sections */
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+    
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+    
+    --accent: 0 0% 100%;
+    --accent-foreground: 0 0% 0%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 0%;
+    --ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-light;
+  }
+  
+  /* Premium typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-6xl lg:text-7xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  /* Premium button variants */
+  .btn-premium {
+    @apply px-8 py-4 border-2 border-premium-black bg-transparent text-premium-black font-medium 
+           transition-all duration-300 hover:bg-premium-black hover:text-premium-white;
+  }
+  
+  .btn-premium-inverted {
+    @apply px-8 py-4 border-2 border-premium-white bg-transparent text-premium-white font-medium
+           transition-all duration-300 hover:bg-premium-white hover:text-premium-black;
+  }
+  
+  /* Premium card */
+  .card-premium {
+    @apply bg-white shadow-elegant border border-border p-8 transition-all duration-300
+           hover:shadow-premium hover:-translate-y-1;
+  }
+  
+  /* Premium section spacing */
+  .section-premium {
+    @apply py-20 md:py-32;
+  }
+  
+  /* Premium container */
+  .container-premium {
+    @apply container mx-auto px-6 lg:px-8;
+  }
+  
+  /* Smooth scroll animations */
+  .fade-in-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .fade-in-up.in-view {
+    @apply opacity-100 translate-y-0;
+  }
+}
